@@ -61,6 +61,7 @@ function setLoggedIn(user) {
   // Hide auth links and hamburger
   document.getElementById("navLinks").style.display = "none";
   document.getElementById("hamburger").style.display = "none";
+  document.getElementById("profileBtn").style.display = "flex";
 
   // Show profile pill
   const wrap = document.getElementById("profileWrap");
@@ -75,6 +76,7 @@ function setLoggedIn(user) {
 
 function logout() {
   document.getElementById("profileWrap").style.display = "none";
+  document.getElementById("profileBtn").style.display = "none";
   document.getElementById("logoutDrop").classList.remove("show");
   // Restore auth links
   document.getElementById("navLinks").style.display = "";
@@ -182,4 +184,3 @@ function showMsg(id, text, type) {
   clearTimeout(el._t);
   el._t = setTimeout(() => { el.className = "m-msg"; }, 2000);
 }
-

@@ -1,5 +1,6 @@
 // JOBBIESAREA Frontend
 const BASE_URL = window.JOBBIES_API_URL || "/api";
+const AUTH_STORAGE_KEY = "jobbiesarea_user";
 
 
 // ========== MODAL FUNCTIONS ==========
@@ -58,6 +59,7 @@ function toggleDropdown() {
 // ========== AUTHENTICATION ==========
 
 function setLoggedIn(user) {
+  sessionStorage.setItem(AUTH_STORAGE_KEY, JSON.stringify(user));
   // Hide auth links and hamburger
   document.getElementById("navLinks").style.display = "none";
   document.getElementById("hamburger").style.display = "none";
@@ -75,12 +77,23 @@ function setLoggedIn(user) {
 }
 
 function logout() {
+  sessionStorage.removeItem(AUTH_STORAGE_KEY);
   document.getElementById("profileWrap").style.display = "none";
   document.getElementById("profileBtn").style.display = "none";
   document.getElementById("logoutDrop").classList.remove("show");
   // Restore auth links
   document.getElementById("navLinks").style.display = "";
   document.getElementById("hamburger").style.display = "";
+}
+
+function restoreLoggedInUser() {
+  try {
+    const savedUser = sessionStorage.getItem(AUTH_STORAGE_KEY);
+    if (savedUser) setLoggedIn(JSON.parse(savedUser));
+  } catch (error) {
+    sessionStorage.removeItem(AUTH_STORAGE_KEY);
+    console.warn("Unable to restore login state:", error);
+  }
 }
 
 // ========== FORM SUBMISSION ==========
@@ -184,3 +197,5 @@ function showMsg(id, text, type) {
   clearTimeout(el._t);
   el._t = setTimeout(() => { el.className = "m-msg"; }, 2000);
 }
+
+restoreLoggedInUser();

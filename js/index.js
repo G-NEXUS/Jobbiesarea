@@ -25,7 +25,7 @@ function togglePw(fieldId, btn) {
   const field = document.getElementById(fieldId);
   const isPassword = field.type === "password";
   field.type = isPassword ? "text" : "password";
-  btn.textContent = isPassword ? "🙈" : "👁️";
+  btn.innerHTML = isPassword ? `<svg class="eye-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 3l18 18M10.6 6.2A10.2 10.2 0 0 1 12 6c6 0 9.5 6 9.5 6a17 17 0 0 1-3.2 3.8M6.2 6.8C3.9 8.2 2.5 12 2.5 12s3.5 6 9.5 6c1.2 0 2.3-.2 3.3-.6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>` : `<svg class="eye-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>`;
 }
 
 // ========== HAMBURGER MENU & NAVIGATION ==========
@@ -140,14 +140,14 @@ document.getElementById("regForm").addEventListener("submit", async e => {
     }
 
     document.getElementById("regForm").reset();
-    showMsg("regMsg","Account created! Text file generated. ✅","success");
+    showMsg("regMsg","Account created! Text file generated.","success");
     
     setTimeout(() => {
       closeModal("regOverlay");
       setLoggedIn(data.user);
     }, 1400);
   } catch (error) {
-    console.error("❌ Registration error:", error);
+    console.error("Registration error:", error);
     showMsg("regMsg", error.message || "Registration failed", "error");
   }
 });
@@ -175,7 +175,7 @@ document.getElementById("logForm").addEventListener("submit", async e => {
       return;
     }
 
-    showMsg("logMsg","Welcome back, "+data.user.firstName+"! 🎉","success");
+    showMsg("logMsg","Welcome back, "+data.user.firstName+"!","success");
     document.getElementById("logForm").reset();
     
     setTimeout(() => {
@@ -183,7 +183,7 @@ document.getElementById("logForm").addEventListener("submit", async e => {
       setLoggedIn(data.user);
     }, 1400);
   } catch (error) {
-    console.error("❌ Login error:", error);
+    console.error("Login error:", error);
     showMsg("logMsg", error.message || "Login failed", "error");
   }
 });

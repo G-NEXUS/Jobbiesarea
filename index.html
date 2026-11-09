@@ -36,7 +36,7 @@
         <span class="profile-name" id="profileName"></span>
       </div>
       <div class="logout-drop" id="logoutDrop">
-        <button onclick="logout()">🚪 Logout</button>
+        <button onclick="logout()"><svg class="logout-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10 4H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M13 8l4 4-4 4M8 12h9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Logout</button>
       </div>
     </div>
   </nav>
@@ -44,7 +44,7 @@
   <!--==== REGISTER MODAL ====-->
   <div class="overlay" id="regOverlay" onclick="overlayClick(event,'regOverlay')">
     <div class="modal">
-      <button class="modal-close" onclick="closeModal('regOverlay')">✕</button>
+      <button class="modal-close" aria-label="Close" onclick="closeModal('regOverlay')"><svg class="close-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
       <div class="modal-header">
         <div class="accent-bar"></div>
         <h2>Create Account</h2>
@@ -80,13 +80,13 @@
         <label>Password</label>
         <div class="pw-wrap">
           <input id="rPass" type="password" placeholder="Min 6 characters" required />
-          <button type="button" class="pw-toggle" onclick="togglePw('rPass',this)">👁️</button>
+          <button type="button" class="pw-toggle" onclick="togglePw('rPass',this)"><svg class="eye-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></button>
         </div>
 
         <label>Confirm password</label>
         <div class="pw-wrap">
           <input id="rPass2" type="password" placeholder="Repeat password" required />
-          <button type="button" class="pw-toggle" onclick="togglePw('rPass2',this)">👁️</button>
+          <button type="button" class="pw-toggle" onclick="togglePw('rPass2',this)"><svg class="eye-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></button>
         </div>
 
         <button type="submit" class="m-btn">Create Account</button>
@@ -99,7 +99,7 @@
   <!--==== LOGIN MODAL ====-->
   <div class="overlay" id="logOverlay" onclick="overlayClick(event,'logOverlay')">
     <div class="modal">
-      <button class="modal-close" onclick="closeModal('logOverlay')">✕</button>
+      <button class="modal-close" aria-label="Close" onclick="closeModal('logOverlay')"><svg class="close-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
       <div class="modal-header">
         <div class="accent-bar"></div>
         <h2>Welcome Back</h2>
@@ -113,7 +113,7 @@
         <label>Password</label>
         <div class="pw-wrap">
           <input id="lPass" type="password" placeholder="Your password" required />
-          <button type="button" class="pw-toggle" onclick="togglePw('lPass',this)">👁️</button>
+          <button type="button" class="pw-toggle" onclick="togglePw('lPass',this)"><svg class="eye-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></button>
         </div>
 
         <div class="switch-link" style="padding-bottom: 10px;">Forgot password? <span onclick="switchTo('')">Reset</span></div>
@@ -141,7 +141,7 @@
     <div class="subject-grid">
       <div class="card">
         <div class="card-content">
-          <div class="card-icon chem-icon">🧪</div>
+          <div class="card-icon chem-icon"><svg class="subject-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 1.8 3h10.4A2 2 0 0 0 19 18l-5-9V3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M7 16h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
           <h2>Chemistry (CH 110)</h2>
           <p>Study of matter, its properties, how and why substances combine or separate.</p>
         </div>
@@ -153,7 +153,7 @@
     =================================-->
       <div class="card">
         <div class="card-content">
-          <div class="card-icon phy-icon">⚛️</div>
+          <div class="card-icon phy-icon"><svg class="subject-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="2" fill="currentColor"/><ellipse cx="12" cy="12" rx="9" ry="4" fill="none" stroke="currentColor" stroke-width="1.5"/><ellipse cx="12" cy="12" rx="9" ry="4" transform="rotate(60 12 12)" fill="none" stroke="currentColor" stroke-width="1.5"/><ellipse cx="12" cy="12" rx="9" ry="4" transform="rotate(120 12 12)" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></div>
           <h2>Physics (PH 110)</h2>
           <p>The science concerned with the nature and properties of matter and energy.</p>
         </div>
@@ -165,7 +165,7 @@
     =================================-->
       <div class="card">
         <div class="card-content">
-          <div class="card-icon comm-icon">🗣️</div>
+          <div class="card-icon comm-icon"><svg class="subject-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3h8A2.5 2.5 0 0 1 17 5.5v5a2.5 2.5 0 0 1-2.5 2.5H10l-4 3v-3.2a2.5 2.5 0 0 1-2-2.3v-5Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M17 8h1a2.5 2.5 0 0 1 2.5 2.5v5.2a2.5 2.5 0 0 1-2 2.3V21l-4-3h-2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></div>
           <h2>Communication Skills (LA 111)</h2>
           <p>Developing effective verbal, non-verbal, and written communication techniques.</p>
         </div>
@@ -177,7 +177,7 @@
     =================================-->
       <div class="card">
         <div class="card-content">
-          <div class="card-icon draw-icon">📐</div>
+          <div class="card-icon draw-icon"><svg class="subject-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m4 19 5-14 11 11-14 5-2-2Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="m9 5 2 2M7.5 9.2l2 2M6 13.4l2 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
           <h2>Engineering Drawing (ED 111-211)</h2>
           <p>Mastering technical drawings and blueprints for mechanical and structural designs.</p>
         </div>
@@ -189,7 +189,7 @@
     =================================-->
       <div class="card">
         <div class="card-content">
-          <div class="card-icon comp-icon">💻</div>
+          <div class="card-icon comp-icon"><svg class="subject-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="4" y="4" width="16" height="12" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M2 20h20M9 20l1-4h4l1 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
           <h2>Computer Science (CS 110)</h2>
           <p>Introduction to programming, hardware, software, and fundamental algorithms.</p>
         </div>
@@ -201,7 +201,7 @@
     =================================-->
       <div class="card">
         <div class="card-content">
-          <div class="card-icon bio-icon">🧬</div>
+          <div class="card-icon bio-icon"><svg class="subject-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 3c0 5 10 5 10 10s-10 5-10 8M17 3c0 5-10 5-10 10s10 5 10 8M8 7h8M8 12h8M8 17h8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
           <h2>Biology (Bio)</h2>
           <p>The natural science that studies life and living organisms.</p>
         </div><a href="biology.html" class="card-button">View Topics</a>
@@ -212,7 +212,7 @@
     =================================-->
       <div class="card">
         <div class="card-content">
-          <div class="card-icon bio-icon">➗</div>
+          <div class="card-icon bio-icon"><svg class="subject-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="6" r="1.5" fill="currentColor"/><path d="M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="18" r="1.5" fill="currentColor"/></svg></div>
           <h2>Math (MA 110)</h2>
           <p>De Morgan's laws, sets, algebra and more.</p>
         </div>

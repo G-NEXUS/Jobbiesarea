@@ -1,4 +1,5 @@
 // JOBBIESAREA Frontend
+const BASE_URL = window.JOBBIES_API_URL || "/api";
 
 
 // ========== MODAL FUNCTIONS ==========
@@ -181,5 +182,4 @@ function showMsg(id, text, type) {
   clearTimeout(el._t);
   el._t = setTimeout(() => { el.className = "m-msg"; }, 2000);
 }
-
 

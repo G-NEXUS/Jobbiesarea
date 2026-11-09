@@ -1,0 +1,22 @@
+{
+  "name": "jobbiesarea",
+  "version": "1.0.0",
+  "private": true,
+  "description": "JobbiesArea learning resource with MongoDB-backed authentication",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "check": "node --check server.js && node --check js/index.js && node --check js/linking.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongodb": "^6.12.0"
+  }
+}
